@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "hc3emu2: Current File",
+      "type": "luaMobDebug",
+      "request": "launch",
+      "workingDirectory": "${workspaceFolder}",
+      "sourceBasePath": "${workspaceFolder}",
+      "listenPort": 8172,
+      "stopOnEntry": false,
+      "sourceEncoding": "UTF-8",
+      "interpreter": "lua",
+      "arguments": [
+        "-e",
+        "require('hc3emu2')",
+        "run",
+        "${relativeFile}"
+      ],
+      "listenPublicly": true
+    }
+  ]
+}

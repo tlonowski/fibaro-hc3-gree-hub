@@ -1,0 +1,2 @@
+-- udplib.lua: UDP socket is managed centrally in main.lua.
+-- Keeping this file safe to prevent creating redundant orphan sockets on HC3.

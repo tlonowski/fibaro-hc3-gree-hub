@@ -31,7 +31,16 @@ QuickApp.translations = {
             swing_default = "Swing mode: Default",
             swing_full = "Swing mode: Full Swing",
             swing_middle = "Swing mode: Fixed in the middle position",
-            swing_undefined = "Swing mode: Undefined"
+            swing_undefined = "Swing mode: Undefined",
+            hub_autodiscovery = "Auto-discovery: ACTIVE",
+            hub_ac_count = "AC devices in network: %d ✅",
+            hub_scan_hint = "Click below to scan local network",
+            hub_scanning = "Scanning LAN in progress... 🔍",
+            hub_found_count = "Found: %d | In system: %d ✅",
+            hub_no_new = "No new devices found ⚠️",
+            ac_device_prefix = "AC ",
+            connecting = "Connecting... ⏳",
+            reconnecting_step = "Connecting... 🔄 (#%d)"
         },
         messages = {
             pairing_timeout = "Pairing timeout ⏰",
@@ -79,7 +88,11 @@ QuickApp.translations = {
             turnOn = "ON",
             turnOff = "OFF",
             pair = "Pair device",
-            buttonUpdateStatuses = "Read all statuses"
+            buttonUpdateStatuses = "Read all statuses",
+            buttonScan = "🔍 Scan LAN network",
+            hub_turn_on_all = "⚡ Turn all ON",
+            hub_turn_off_all = "🛑 Turn all OFF",
+            buttonRemoveAll = "🗑 Remove all"
         }
     },
     pl = {
@@ -111,7 +124,16 @@ QuickApp.translations = {
             swing_default = "Ruch powietrza: Domyślny",
             swing_full = "Ruch powietrza: Pełny zakres",
             swing_middle = "Ruch powietrza: Środkowa pozycja",
-            swing_undefined = "Ruch powietrza: Niezdefiniowany"
+            swing_undefined = "Ruch powietrza: Niezdefiniowany",
+            hub_autodiscovery = "Autowykrywanie: WŁĄCZONE",
+            hub_ac_count = "Klimatyzatory w sieci: %d ✅",
+            hub_scan_hint = "Kliknij poniżej aby przeskanować sieć",
+            hub_scanning = "Skanowanie sieci LAN w toku... 🔍",
+            hub_found_count = "Znaleziono: %d | W systemie: %d ✅",
+            hub_no_new = "Nie wykryto nowych urządzeń ⚠️",
+            ac_device_prefix = "Klimatyzator ",
+            connecting = "Łączenie... ⏳",
+            reconnecting_step = "Łączenie... 🔄 (#%d)"
         },
         messages = {
             pairing_timeout = "Parowanie przekroczyło czas ⏰",
@@ -159,7 +181,11 @@ QuickApp.translations = {
             turnOn = "Włącz",
             turnOff = "Wyłącz",
             pair = "Paruj urządzenie",
-            buttonUpdateStatuses = "Odczytaj wszystkie statusy"
+            buttonUpdateStatuses = "Odczytaj wszystkie statusy",
+            buttonScan = "🔍 Skanuj sieć LAN",
+            hub_turn_on_all = "⚡ Włącz wszystkie",
+            hub_turn_off_all = "🛑 Wyłącz wszystkie",
+            buttonRemoveAll = "🗑 Usuń wszystkie"
         }
     },
     de = {
@@ -191,7 +217,16 @@ QuickApp.translations = {
             swing_default = "Swing: Standard",
             swing_full = "Swing: Voller Bereich",
             swing_middle = "Swing: Mittlere Position",
-            swing_undefined = "Swing: Unbekannt"
+            swing_undefined = "Swing: Unbekannt",
+            hub_autodiscovery = "Auto-Erkennung: AKTIV",
+            hub_ac_count = "Klimageräte im Netzwerk: %d ✅",
+            hub_scan_hint = "Unten klicken, um das Netzwerk zu scannen",
+            hub_scanning = "LAN-Scan läuft... 🔍",
+            hub_found_count = "Gefunden: %d | Gesamt: %d ✅",
+            hub_no_new = "Keine neuen Geräte gefunden ⚠️",
+            ac_device_prefix = "Klimaanlage ",
+            connecting = "Verbinde... ⏳",
+            reconnecting_step = "Verbinde... 🔄 (#%d)"
         },
         messages = {
             pairing_timeout = "Kopplungs-Timeout ⏰",
@@ -239,7 +274,11 @@ QuickApp.translations = {
             turnOn = "Ein",
             turnOff = "Aus",
             pair = "Gerät koppeln",
-            buttonUpdateStatuses = "Alle Status lesen"
+            buttonUpdateStatuses = "Alle Status lesen",
+            buttonScan = "🔍 LAN-Netzwerk scannen",
+            hub_turn_on_all = "⚡ Alle einschalten",
+            hub_turn_off_all = "🛑 Alle ausschalten",
+            buttonRemoveAll = "🗑 Alle entfernen"
         }
     },
     fr = {
@@ -271,7 +310,16 @@ QuickApp.translations = {
             swing_default = "Balayage: Par défaut",
             swing_full = "Balayage: Amplitude complète",
             swing_middle = "Balayage: Position centrale fixe",
-            swing_undefined = "Balayage: Indéfini"
+            swing_undefined = "Balayage: Indéfini",
+            hub_autodiscovery = "Détection auto : ACTIVE",
+            hub_ac_count = "Climatiseurs sur le réseau : %d ✅",
+            hub_scan_hint = "Cliquez ci-dessous pour scanner le réseau",
+            hub_scanning = "Scan LAN en cours... 🔍",
+            hub_found_count = "Trouvés : %d | Total : %d ✅",
+            hub_no_new = "Aucun nouvel appareil détecté ⚠️",
+            ac_device_prefix = "Climatiseur ",
+            connecting = "Connexion... ⏳",
+            reconnecting_step = "Connexion... 🔄 (#%d)"
         },
         messages = {
             pairing_timeout = "Délai d'appairage dépassé ⏰",
@@ -319,7 +367,11 @@ QuickApp.translations = {
             turnOn = "Marche",
             turnOff = "Arrêt",
             pair = "Appairer l'appareil",
-            buttonUpdateStatuses = "Lire tous les statuts"
+            buttonUpdateStatuses = "Lire tous les statuts",
+            buttonScan = "🔍 Scanner le réseau local",
+            hub_turn_on_all = "⚡ Tout allumer",
+            hub_turn_off_all = "🛑 Tout éteindre",
+            buttonRemoveAll = "🗑 Tout supprimer"
         }
     }
 }

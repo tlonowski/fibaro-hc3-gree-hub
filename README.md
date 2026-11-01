@@ -55,6 +55,7 @@ Projekt w wersji 2.0 wykorzystuje architekturę **Hub + Urządzenia Potomne (Chi
 ### Konfiguracja (QuickApp Variables)
 
 #### Zmienne głównego Huba:
+- `language` – język interfejsu: `auto` (automatyczne wykrycie z ustawień centrali HC3), `pl`, `en`, `de`, `fr` (domyślnie `auto`).
 - `scan_network` – adres podsieci do skanowania (np. `10.88.20.0/24` lub kilka podsieci po przecinku). Przydatne, gdy klimatyzatory znajdują się w innym VLAN-ie niż centrala HC3.
 - `scan_mask` – maska podsieci (domyślnie `255.255.255.0`).
 - `ac_names` – opcjonalne mapowanie własnych nazw jednostek po ID/MAC/IP (np. `1ef92c54=Salon, 1ef92afc=Sypialnia, 1ee2f5e9=Gabinet`).
@@ -126,6 +127,7 @@ Version 2.0 introduces a **Hub + Child Devices architecture**:
 
 ### Configuration (QuickApp Variables)
 
+- `language` – UI language: `auto` (auto-detected from HC3 system settings), `pl`, `en`, `de`, `fr` (default: `auto`).
 - `scan_network` – subnet(s) to scan, e.g., `10.88.20.0/24` (comma-separated if multiple).
 - `scan_mask` – subnet mask (default `255.255.255.0`).
 - `ac_names` – custom name mapping by CID/MAC/IP (e.g., `1ef92c54=LivingRoom, 1ef92afc=Bedroom`).

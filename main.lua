@@ -557,19 +557,17 @@ function QuickApp:prepareEnvironment()
 
 	local hubVars = {
 		{ name = "language", value = "auto" },
-		{ name = "scan_network", value = "10.88.20.0/24" },
+		{ name = "scan_network", value = "" },
 		{ name = "scan_mask", value = "255.255.255.0" },
 		{ name = "refreshSec", value = "120" },
 		{ name = "showDebug", value = "true" },
-		{ name = "ac_names", value = "1ef92c54=Salon, 1ef92afc=Sypialnia, 1ee2f5e9=Gabinet" },
-		{ name = "ac_ip", value = "10.88.20.108" },
-		{ name = "ac_name", value = "Salon" },
+		{ name = "ac_names", value = "" },
 	}
 
 	-- Bezpieczne ustawienie brakujących zmiennych natywną metodą QuickApp
 	for _, def in ipairs(hubVars) do
 		local current = self:getVariable(def.name)
-		if current == nil or current == "" then
+		if current == nil then
 			pcall(function()
 				self:setVariable(def.name, def.value)
 			end)
@@ -674,10 +672,7 @@ function QuickApp:onInit()
 	end
 
 	-- 5. Pobranie konfiguracji skanowania innej sieci / VLANu
-	self.scan_network = self:getVariable("scan_network")
-	if not self.scan_network or self.scan_network == "" then
-		self.scan_network = "10.88.20.0/24"
-	end
+	self.scan_network = self:getVariable("scan_network") or ""
 	self.scan_mask = self:getVariable("scan_mask")
 	if not self.scan_mask or self.scan_mask == "" then
 		self.scan_mask = "255.255.255.0"
@@ -1043,7 +1038,7 @@ function QuickApp:scanConfiguredSubnets(netStr, maskStr)
 					)
 				)
 
-				-- A) Directed Broadcast na adres podsieci (np. 10.88.20.255:7000)
+				-- A) Directed Broadcast na adres podsieci (np. 192.168.1.255:7000)
 				if subnetInfo.broadcast and subnetInfo.broadcast ~= "" then
 					udp:sendTo('{"t":"scan"}', subnetInfo.broadcast, 7000, {
 						success = function()

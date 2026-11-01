@@ -45,6 +45,12 @@ Projekt w wersji 2.0 wykorzystuje architekturę **Hub + Urządzenia Potomne (Chi
 
 ### Instalacja w Fibaro HC3
 
+#### Sposób 1 (Zalecany): Import gotowego pliku `.fqa`
+1. Pobierz plik [`Gree_AC_Hub_v2.0.fqa`](Gree_AC_Hub_v2.0.fqa) (lub z zakładki **Releases**).
+2. W panelu **Fibaro Home Center 3** przejdź do **Ustawienia -> Urządzenia -> Dodaj urządzenie -> Inne urządzenie -> Wgraj plik**.
+3. Wybierz pobrany plik `Gree_AC_Hub_v2.0.fqa`. Hub automatycznie utworzy zmienne i rozpocznie skanowanie sieci LAN.
+
+#### Sposób 2: Ręczne utworzenie z plików `.lua`
 1. W panelu **Fibaro Home Center 3** przejdź do **Ustawienia -> Urządzenia -> Dodaj urządzenie -> Inne urządzenie -> QuickApp**.
 2. Wybierz typ urządzenia (np. *Urządzenie binarne* lub *Kontroler klimatyzacji*) i utwórz pusty QuickApp.
 3. W zakładce **Edycja i pliki** utwórz/podmień pliki zgodnie z zawartością tego repozytorium:
@@ -56,9 +62,9 @@ Projekt w wersji 2.0 wykorzystuje architekturę **Hub + Urządzenia Potomne (Chi
 
 #### Zmienne głównego Huba:
 - `language` – język interfejsu: `auto` (automatyczne wykrycie z ustawień centrali HC3), `pl`, `en`, `de`, `fr` (domyślnie `auto`).
-- `scan_network` – adres podsieci do skanowania (np. `10.88.20.0/24` lub kilka podsieci po przecinku). Przydatne, gdy klimatyzatory znajdują się w innym VLAN-ie niż centrala HC3.
+- `scan_network` – adres podsieci do skanowania (np. `192.168.20.0/24` lub kilka podsieci po przecinku). Przydatne, gdy klimatyzatory znajdują się w innym VLAN-ie niż centrala HC3.
 - `scan_mask` – maska podsieci (domyślnie `255.255.255.0`).
-- `ac_names` – opcjonalne mapowanie własnych nazw jednostek po ID/MAC/IP (np. `1ef92c54=Salon, 1ef92afc=Sypialnia, 1ee2f5e9=Gabinet`).
+- `ac_names` – opcjonalne mapowanie własnych nazw jednostek po ID/MAC/IP (np. `aabbccddeeff=Salon, 112233445566=Sypialnia`).
 - `refreshSec` – domyślny czas odświeżania statusu w sekundach (domyślnie `120`).
 - `showDebug` – włączenie szczegółowych logów w konsoli HC3 (`true` / `false`).
 
@@ -77,7 +83,7 @@ Projekt w wersji 2.0 wykorzystuje architekturę **Hub + Urządzenia Potomne (Chi
   ```
 - Ręczne wymuszenie skanowania wybranej podsieci:
   ```lua
-  fibaro.call(HUB_ID, "scanSubnet", "10.88.20.0/24")
+  fibaro.call(HUB_ID, "scanSubnet", "192.168.20.0/24")
   ```
 - Sterowanie pojedynczym klimatyzatorem (urządzeniem potomnym):
   ```lua
@@ -128,8 +134,8 @@ Version 2.0 introduces a **Hub + Child Devices architecture**:
 ### Configuration (QuickApp Variables)
 
 - `language` – UI language: `auto` (auto-detected from HC3 system settings), `pl`, `en`, `de`, `fr` (default: `auto`).
-- `scan_network` – subnet(s) to scan, e.g., `10.88.20.0/24` (comma-separated if multiple).
+- `scan_network` – subnet(s) to scan, e.g., `192.168.20.0/24` (comma-separated if multiple).
 - `scan_mask` – subnet mask (default `255.255.255.0`).
-- `ac_names` – custom name mapping by CID/MAC/IP (e.g., `1ef92c54=LivingRoom, 1ef92afc=Bedroom`).
+- `ac_names` – custom name mapping by CID/MAC/IP (e.g., `aabbccddeeff=LivingRoom, 112233445566=Bedroom`).
 - `refreshSec` – status polling interval in seconds (default `120`).
 - `showDebug` – enable verbose logging in HC3 console (`true` / `false`).
